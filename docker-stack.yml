@@ -1,0 +1,23 @@
+version: "3"
+
+services:
+  vote:
+    image: demo.dtr.nebulaworks.com/nebulaworks/ct2016-vote:98
+    ports:
+      - "5002:80"
+
+  redis:
+    image: redis:alpine
+    ports: ["6379"]
+
+  worker:
+    image: demo.dtr.nebulaworks.com/nebulaworks/ct2016-worker
+
+  db:
+    image: postgres:9.4
+
+  result:
+    image: demo.dtr.nebulaworks.com/nebulaworks/ct2016-result:98        
+    ports:
+      - "5003:80"
+      - "5859:5858"
