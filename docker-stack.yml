@@ -20,4 +20,3 @@ services:
     image: demo.dtr.nebulaworks.com/nebulaworks/ct2016-result:98        
     ports:
       - "5003:80"
-      - "5859:5858"
